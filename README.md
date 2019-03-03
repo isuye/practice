@@ -3,3 +3,5 @@
 - demo:[GitHub Pages](https://isuye.github.io/practice/min/index.html)
 2. 组合使用构造函数模式和原型模式创建对象,利用Promise完成整个用餐过程
 - demo:[GitHub Pages](https://isuye.github.io/practice/restaurant/index.html)
+3. 个人GTD
+- demo:[GitHub Pages](https://isuye.github.io/practice/task0003/index.html)
