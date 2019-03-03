@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #eee;
+	width: 100%;
+	min-width: 980px;
+}
+/**********页眉************/
+header {
+	background-color: #522a5c;
+	height: 80px;
+	position: relative;
+	z-index: 1;
+}
+header div{
+	background-color: #522a5c;
+	height: 100%;
+	width: 980px;
+	margin: 0 auto;
+	color: white;
+	/* //z-index: 10; */
+} 
+header p{
+	position: absolute;
+	bottom: 5px;
+}
+header ul{
+	
+	height: 80px;
+	display: flex;
+	list-style: none;
+	bottom: 5px;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-bottom: 5px;
+	
+}
+header li{
+	padding-left: 28px;
+	
+}
+header img{
+	position: absolute;
+	right: 10px;
+	bottom: 0;
+	z-index: -1;
+}
+header a{
+	color: white;
+	text-decoration : none;
+	
+}
+
+
+/**********banner************/
+#banner{
+	position: relative;
+}
+#banner img{
+	width: 100%;
+
+}
+#banner div{
+	position: absolute;
+	bottom: 20px;
+	right: 70px;
+	width: 360px;
+	height: 120px;
+	/* //border: 1px solid black; */
+	text-indent: 2em;
+	padding: 10px;
+	background: linear-gradient(rgba(250,250,250,.3),
+								rgba(250,250,250,.3),
+								rgba(250,250,250,.5),
+								rgba(250,250,250,0))
+	
+
+}
+#banner h3{
+	text-align: right;
+	padding-right: 8px; 
+}
+
+/**********内容************/	
+
+/**********内容>>>>文章************/
+#content {
+	width: 980px;
+	margin: 10px auto 110px auto;
+	display: flex;
+	justify-content: space-between;
+
+}
+#content div{
+	width: 320px;
+	height: 360px;
+	background: white;
+	/* //border: 1px solid black; */
+}
+#content img, #content p{
+	margin: 10px;
+	text-indent: 2em;
+}
+
+/**********作者************/
+
+#author {
+	height: 520px;
+	/* //width: 100%; */
+	background: white;
+	text-align: center;
+}
+#author img{
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	margin: -50px 0 40px 0;
+}
+#author div{
+	width: 400px;
+	margin: 20px auto 0 auto;
+	text-align: left;
+	text-indent: 2em;
+
+}
+
+
+/**********页脚************/
+
+footer{
+	background: black;
+	color: white;
+
+}
+#nav ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+#nav li{
+	margin: 10px 28px 10px 0;
+}
+#link {
+	width: 980px;
+	margin: 30px auto 30px auto;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+#link ul{
+	list-style: none;
+}
+.big{
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+#copyRight{
+	text-align: center;
+}
+#copyRight img{
+	margin-top: 20px;
+}
