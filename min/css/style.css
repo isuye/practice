@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	//font-size: 18px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+body{
+	padding: 10px;
+}
+#checkBox,#tableBox{
+	margin: 10px;
+}
+table {
+	border-collapse:collapse;
+/*	border-collapse: separate;
+	border-spacing: 10px*/
+}
+
+tr:hover {
+	background-color: #FFE4E1;
+}
+
+td,th{
+	border:1px solid #98bf21;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+}
+th {
+	background-color:#A7C942;
+	color:#ffffff;
+}
+#svg {
+	font-size: 12px;
+}
+img{
+	display: none;
+	float:right;
+}
+.number:hover img{
+	display: block
+}
