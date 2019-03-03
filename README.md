@@ -5,3 +5,5 @@
 - demo:[GitHub Pages](https://isuye.github.io/practice/restaurant/index.html)
 3. 个人GTD
 - demo:[GitHub Pages](https://isuye.github.io/practice/task0003/index.html)
+4. 弹幕
+- demo:[GitHub Pages](https://isuye.github.io/practice/barrage/index.html)
