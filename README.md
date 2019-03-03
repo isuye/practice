@@ -9,5 +9,5 @@
 - demo:[GitHub Pages](https://isuye.github.io/practice/task0003/index.html)
 5. 弹幕
 - demo:[GitHub Pages](https://isuye.github.io/practice/barrage/index.html)
-5. 博客
+6. 博客
 - demo:[GitHub Pages](https://isuye.github.io/practice/blog/index.html)
