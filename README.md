@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-xiugai
-=======
 ＃ 练习
 1. 数据报表制定页面,通过LocalStorage存储数据,通过SVG和Canvas根据选择数据渲染图表,通过location.hash来实现页面刷新保留渲染状态
 - demo:[GitHub Pages](https://isuye.github.io/practice/min/index.html)
