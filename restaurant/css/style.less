@@ -1,0 +1,161 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	//border: 1px solid black;
+}
+body {
+	width: 850px;
+	height: 600px;
+}
+/*状态栏****************************************/
+#head {
+	border: 1px solid black;
+	>div {
+		border-left: 1px solid black;
+	}
+	height: 150px;
+	display: flex;
+	#rest-name {
+		width: 50px;
+		text-align: center;
+		margin: auto 0;
+	}
+	#rest-detail{
+		width: 150px;
+	}
+	#rest-cook, #rest-waiter{
+		flex: 1;
+	}
+}
+
+
+// 区域*******************************************
+#content {
+	display: flex;
+	>div{
+		border: 1px solid black;
+		height: 450px;
+	}
+}
+.employ{
+	position: relative;
+	.resSeat;
+}
+.staffNews{
+	float: right;
+	width: 70px;
+	height:100px;
+}
+#setarea {//座位区域
+
+	float: right;
+	width: 140px;
+	height: 450px;
+}
+.resSeat {//座位
+	margin: 10px 0;
+	border: 1px solid black;
+	width: 140px;
+	height: 120px;
+
+ }
+ ul {
+	margin-top: 10px;
+ 	list-style-type: none;
+ 	padding-left: 5px;
+ }
+// 厨房****************************************
+#part1 {
+	width: 300px;
+}
+#menuList {
+	border: 1px solid black;
+	float: right;
+	margin-top: 10px;
+	width: 150px;
+	height: 90%;
+	ul{
+		margin-top: 10px;
+		border-bottom: 1px solid black;
+	}
+}
+// 座位****************************************
+#part2 {
+	width: 400px;
+
+}
+
+
+// 排队区****************************************
+#part3 {
+	width: 150px;
+}
+
+
+// 服务员移动****************************************
+.toCustomer {
+	.resSeat;
+	position:absolute;
+	animation-timing-function: ease-in-out;
+	animation:toCustomer 1s;
+	animation-fill-mode:forwards;
+}
+@keyframes toCustomer
+{
+	0%   {left:300px;}
+	100% {left:410px;}
+}
+.toCooker {
+	.resSeat;
+	position:absolute;
+	animation-timing-function: ease-in-out;
+	animation:toCooker 1s;
+	animation-fill-mode:forwards;
+}
+@keyframes toCooker
+{
+	0%   {left:410px;}
+	100% {left:300px;}
+}
+// 客人移动****************************************
+.toWait {
+	border: 1px solid black;
+	position:relative;
+	animation-timing-function: ease-in-out;
+	animation:toWait 3s;
+	animation-fill-mode:forwards;
+}
+@keyframes toWait
+{
+	0%   {top:500px;}
+	100% {top:0px;}
+}
+
+.toSeat {
+	.resSeat;
+	position:absolute;
+	animation-timing-function: ease-in-out;
+	animation:toSeat 1s;
+	animation-fill-mode:forwards;
+}
+@keyframes toSeat
+{
+	0%   {left:600px;}
+	100% {left:560px;}
+}
+.toLeave {
+	border: 1px solid black;
+	position:relative;
+	animation-timing-function: ease-in-out;
+	animation:toLeave 3s;
+	animation-fill-mode:forwards;
+}
+@keyframes toLeave
+{
+	0%   {right:0px;}
+	100% {right:500px;}
+}
+
+
+

@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 14px arial, sans-serif;
+}
+body {
+  display: flex;
+}
+#nav-right {
+  width: 35px;
+  height: 450px;
+  justify-content: flex-end;
+  order: 2;
+}
+#content {
+  order: 1;
+  width: 100%;
+  background-color: #550283;
+}
+header {
+  background-color: #550283;
+  width: 100%;
+  box-shadow: 0px 1px 5px #000;
+}
+header #img {
+  width: 100%;
+  background-color: #8a3669;
+}
+header #img img {
+  margin: 0 auto;
+}
+header div {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  min-width: 1000px;
+}
+header li {
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 35px;
+  line-height: 35px;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+#main {
+  padding: 0 45px 0 55px;
+  width: 100%;
+}
+#page-one {
+  width: 100%;
+  padding: 0 30px 0 40px;
+  min-width: 1000px;
+}
+#search {
+  margin: 0 auto;
+  text-align: center;
+  height: 130px;
+}
+#search ul {
+  margin: 0 auto;
+}
+#search li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+  line-height: 40px;
+}
+#search a {
+  text-decoration: none;
+  color: white;
+}
+#search input {
+  width: 35%;
+  height: 40px;
+  background-color: #550283;
+  margin-top: 35px;
+  border: 2px solid white;
+}
+#search button {
+  width: 130px;
+  background-color: white;
+  color: #db0f0f;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin-left: -4px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+#nav-center {
+  min-width: 1000px;
+  margin: 0 auto;
+}
+#nav-center ul {
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+}
+#nav-center li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+}
+#nav-center li:nth-child(1),
+#nav-center li:nth-child(2) {
+  width: 100px;
+  background: #db0f0f;
+  float: left;
+}
+#nav-center li:nth-child(1):hover,
+#nav-center li:nth-child(2):hover {
+  background: #000;
+}
+#nav-center li:nth-child(1) a,
+#nav-center li:nth-child(2) a {
+  color: white;
+}
+#nav-center a {
+  color: black;
+  font-size: 16px;
+  margin: 0 10px;
+}
+#img-nav {
+  border-top: 2px solid red;
+  text-align: right;
+}
+#img-nav img {
+  width: 100%;
+}
+#avtive h1 {
+  border: 1px solid black;
+  height: 100px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+#avtive li {
+  list-style: none;
+  float: left;
+}
+#avtive img {
+  margin: 5px;
+}
+#brand img {
+  border: 0.5px solid #928d8d;
+  float: left;
+}
