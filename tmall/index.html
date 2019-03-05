@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
- 
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
- 
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>天猫首页</title>
 </head>
 
@@ -23,22 +23,71 @@
     <!-- 右侧导航 -->
     <nav id="nav-right">
         <ul>
-            <li><a><span class="glyphicon glyphicon-map-marker"> </span></a> </li>
-            <li><a><span class="glyphicon  glyphicon-tree-deciduous"> </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-shopping-cart"></span><br>购<br>物<br>车 </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-usd"> </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-star-empty"> </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-repeat"> </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-stats"> </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-qrcode"> </span></a> </li>
-            <li><a><span class="glyphicon glyphicon-map-marker"> </span></a> </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-map-marker"> </span>
+                    <p>主会场</p> <span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon  glyphicon-tree-deciduous"> </span>
+                    <p>会员权益</p><span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    <br>购
+                    <br>物
+                    <br>车 </span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-usd"> </span>
+                    <p>我的资产</p><span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-star-empty"> </span>
+                    <p>我的收藏</p><span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-repeat"> </span>
+                    <p>我看过的</p><span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-stats"> </span>
+                    <p>我要充值</p><span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-qrcode"> </span>
+                    
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="glyphicon glyphicon-map-marker">
+                     </span><p>返回顶部</p><span class="glyphicon glyphicon-play"></span> 
+                </a>
+            </li>
         </ul>
     </nav>
-
+  
     <div id="content">
         <header>
-            <div id="img"><img src="img/banner.png" alt="banner"></div>
-            
+            <div id="img">
+                <img src="img/banner.png" alt="banner">
+            </div>
+
             <div>
                 <ul>
                     <li>
@@ -53,22 +102,31 @@
                 </ul>
                 <ul>
                     <li>
-                        <a href="">我的淘宝<span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <a href="">我的淘宝
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                            
+                        </a>
                     </li>
                     <li>
-                        <a href=""><span class="glyphicon glyphicon-shopping-cart"></span>购物车</a>
+                        <a href="">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>购物车</a>
                     </li>
                     <li>
-                        <a href="">收藏夹<span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <a href="">收藏夹
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
                     </li>
                     <li>
-                        <a href=""><span class="glyphicon glyphicon-phone"></span>手机版</a>
+                        <a href="">
+                            <span class="glyphicon glyphicon-phone"></span>手机版</a>
                     </li>
                     <li>
                         <a href="">淘宝网</a>
                     </li>
                     <li>
-                        <a href="">商家支持<span class="glyphicon glyphicon-chevron-down"></span></a>
+                        <a href="">商家支持
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
                     </li>
                     <li>
                         <a href="">网站导航</a>
@@ -84,26 +142,56 @@
                     <input type="text" placeholder=" 搜索 天猫 商品/品牌/店铺">
                     <button>搜索</button>
                     <ul>
-                        <li><a href="">针织衫 |</a></li>
-                        <li><a href="">连衣裙 |</a></li>
-                        <li><a href="">四件套 |</a></li>
-                        <li><a href="">摄像头 |</a></li>
-                        <li><a href="">客厅灯 |</a></li>
-                        <li><a href="">口红</a></li>
+                        <li>
+                            <a href="">针织衫 |</a>
+                        </li>
+                        <li>
+                            <a href="">连衣裙 |</a>
+                        </li>
+                        <li>
+                            <a href="">四件套 |</a>
+                        </li>
+                        <li>
+                            <a href="">摄像头 |</a>
+                        </li>
+                        <li>
+                            <a href="">客厅灯 |</a>
+                        </li>
+                        <li>
+                            <a href="">口红</a>
+                        </li>
                     </ul>
                 </div>
                 <div id="nav-center">
                     <ul>
-                        <li><a href="">商品分类</a></li>
-                        <li><a href="">女王节</a></li>
-                    
-                        <li><a href="">天猫超市</a></li>
-                        <li><a href="">天猫国际</a></li>
-                        <li><a href="">电器城</a></li>
-                        <li><a href="">喵鲜生</a></li>
-                        <li><a href="">医药馆</a></li>
-                        <li><a href="">营业厅</a></li>
-                        <li><a href="">魅力惠</a></li>
+                        <li>
+                            <a href="">商品分类</a>
+                        </li>
+                        <li>
+                            <a href="">女王节</a>
+                        </li>
+
+                        <li>
+                            <a href="">天猫超市</a>
+                        </li>
+                        <li>
+                            <a href="">天猫国际</a>
+                        </li>
+                        <li>
+                            <a href="">电器城</a>
+                        </li>
+                        <li>
+                            <a href="">喵鲜生</a>
+                        </li>
+                        <li>
+                            <a href="">医药馆</a>
+                        </li>
+                        <li>
+                            <a href="">营业厅</a>
+                        </li>
+                        <li>
+                            <a href="">魅力惠</a>
+                        </li>
                     </ul>
                     <div id="img-nav">
                         <img src="img/b1.png" alt="">
@@ -112,135 +200,54 @@
                 <div id="avtive">
                     <h1>3.8女王节</h1>
                     <ul>
-                        <li><img src="img/b2-1.png" alt=""></li>
-                        <li><img src="img/b2-3.png" alt=""><br><img src="img/b2-5.png" alt=""></li>
-                        
-                        <li><img src="img/b2-4.png" alt=""></li>
-                        <li><img src="img/b2-6.png" alt=""><br><img src="img/b2-7.png" alt=""></li>
-                                              
+                        <li>
+                            <img src="img/b2-1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/b2-3.png" alt="">
+                            <br>
+                            <img src="img/b2-5.png" alt="">
+                        </li>
+
+                        <li>
+                            <img src="img/b2-4.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/b2-6.png" alt="">
+                            <br>
+                            <img src="img/b2-7.png" alt="">
+                        </li>
+
                     </ul>
-                   
+
                     <ul>
-                        <li><p>品牌闪购BRAND SALE </p><img src="img/b3-1.png" alt="" width="235" height="315" ></li>
-                        <li><p>聚名品LUXURY CHANNEL </p><img src="img/b3-2.png" alt="" width="485" height="315" ></li>
-                        <li><p>品牌活动BRAND ACTIVITY </p><img src="img/b3-4.png" alt="" width="485" height="315" ></li>
-                       
+                        <li>
+                            <p>品牌闪购BRAND SALE </p>
+                            <img src="img/b3-1.png" alt="" width="235" height="315">
+                        </li>
+                        <li>
+                            <p>聚名品LUXURY CHANNEL </p>
+                            <img src="img/b3-2.png" alt="" width="485" height="315">
+                        </li>
+                        <li>
+                            <p>品牌活动BRAND ACTIVITY </p>
+                            <img src="img/b3-4.png" alt="" width="485" height="315">
+                        </li>
+
                     </ul>
-                   
+
                 </div>
+                <!-- 品牌 -->
                 <div id="brand">
-                        <ul>
-                                <li>
-                                    <img src="img/b4-1 (1).png" alt="">
-                                    <img src="img/b4-1 (2).png" alt="">
-                                    <img src="img/b4-1 (1).png" alt="">
-                                    <img src="img/b4-1 (2).png" alt="">
-                                    <img src="img/b4-1 (1).png" alt="">
-                                    <img src="img/b4-1 (2).png" alt="">
-                                    <img src="img/b4-1 (1).png" alt="">
-                                    <img src="img/b4-1 (2).png" alt="">
-                                    <img src="img/b4-1 (1).png" alt="">
-                                    <img src="img/b4-1 (2).png" alt="">
-                                </li>
-                        
-                                 <li>
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                </li>
-                                <li>
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                        <img src="img/b4-1 (1).png" alt="">
-                                        <img src="img/b4-1 (2).png" alt="">
-                                </li> -->
-                            </ul>
                 </div>
             </div>
-            <!-- 天猫超市 -->
-            <div class="page-2">
-                <div class="page-titel">
-                 <ul>
-                    <li><img src="img/paga2/page-2 (19).png" alt=""> </li>  
-                    <ul>
-                        <li>进口食品</li>
-                        <li>食品饮料</li>
-                        <li>粮油副食</li>
-                        <li>美容洗护</li>
-                        <li>家居家电</li>
-                        <li>家庭清洁</li>
-                        <li>母婴用品</li>
-                        <li>生鲜水果</li>                            
-                    </ul>               
-                </ul>   
-                </div>             
-                <div class="page-img">
-                    <ul>
-                         <li><img src="img/paga2/page-2 (1).png" alt=""></li> 
-                        <li><img src="img/paga2/page-2 (2).png" alt=""></li>
-                        <li><img src="img/paga2/page-2 (3).png" alt=""></li>
-                        <li><img src="img/paga2/page-2 (4).png" alt=""></li>
-                        <li><img src="img/paga2/page-2 (5).png" alt=""></li>
-                        <li><img src="img/paga2/page-2 (6).png" alt=""></li>
-                        <li><img src="img/paga2/page-2 (7).png" alt=""></li>
-                        <li><img src="img/paga2/page-2 (8).png" alt=""></li>
-                    </ul>
-                </div>
-                
-            </div>
-
-                <!-- 天猫国际 -->
-                <div class="page-2">
-                        <div class="page-titel">
-                            <ul>
-                            <li><img src="img/paga2/page-2 (20).png" alt=""> </li>  
-                            <ul>
-                                <li>进口食品</li>
-                                <li>食品饮料</li>
-                                <li>粮油副食</li>
-                                <li>美容洗护</li>
-                                <li>家居家电</li>
-                                <li>家庭清洁</li>
-                                <li>母婴用品</li>
-                                <li>生鲜水果</li>                            
-                            </ul>               
-                        </ul>   
-                        </div>             
-                        <div class="page-img">
-                            <ul>
-                                <li><img src="img/paga2/page-2 (9).png" alt=""></li> 
-                                <li ><img src="img/paga2/page-2 (10).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (11).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (12).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (13).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (14).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (15).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (16).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (17).png" alt=""></li>
-                                <li><img src="img/paga2/page-2 (18).png" alt=""></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-            
-
         </main>
         <footer></footer>
     </div>
 
+
+    <script src="js/data.js"></script>
+    <script src="js/getpage.js"></script>
 
 </body>
 
