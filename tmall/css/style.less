@@ -11,7 +11,8 @@ ul{
     
 }
 body {
-    display: flex;
+   min-width: 1000px;
+    
 }
 // 左侧导航
 // #nav-left {
@@ -108,7 +109,7 @@ header {
         display: flex;
         justify-content:space-between;
         min-width: 1000px;
-       // padding: 0 75px 0 55px;
+        padding: 0 75px 0 55px;
         //background-color: #8a3669;            
     }
     li {
@@ -183,21 +184,31 @@ header {
 }
 // 首页导航栏
 #nav-center{
+    position: relative;
    min-width: 1000px;
    margin: 0 auto;
-   ul{
+   a {
+    color: black;
+    font-size: 16px;
+    margin: 0 10px;
+   } 
+   
+}
+#nav-title{
+    
         background-color: white;  
        display: inline-block;
        width: 100%;
        margin-bottom: 0;
-   }
+  
    li {
         list-style: none;
         display: inline-block ;
         text-align: center;
         height: 35px;
         line-height: 35px;
-        text-decoration: none;              
+        text-decoration: none;  
+              
    }
    li:nth-child(1),li:nth-child(2){
     //border: 1px solid black;
@@ -205,18 +216,61 @@ header {
         background: #db0f0f;  
        // margin: 0; 
         float: left; 
-        &:hover {
-            background: #000;
-        }
+        
         a{
             color: white;
         }   
     }
-   a {
-    color: black;
-    font-size: 16px;
-    margin: 0 10px;
-   }  
+ 
+}
+#nav-list {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 495px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index: 10;
+    li{
+        height: 495/16px;
+        line-height: 495/16px;
+        &:hover{
+            background-color:white;
+            color: #db0f0f; 
+        }
+    }
+}
+#nav-list2{
+    position: absolute;
+    width: 200px;
+    height: 495px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 10;
+    padding: 20px 0;
+    li{
+        height: 30px;
+        width: 150px;
+        margin: 15px auto;
+        line-height: 495/16px;
+        border: 1px solid red;
+        border-radius :10px;
+        &:hover{
+            background-color:red;
+            
+        }
+    }   
+}
+#searchData{
+    position: absolute;
+    z-index: 10;
+    height: 492px;
+    width: 850px;
+    background-color:rgb(255, 255, 255);
+    top:37px;
+
+    left: 200px;
 }
 #img-nav {
     border-top: 2px solid red;

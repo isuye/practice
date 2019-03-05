@@ -9,7 +9,7 @@ ul {
   margin-bottom: 0;
 }
 body {
-  display: flex;
+  min-width: 1000px;
 }
 #nav-right {
   width: 35px;
@@ -83,6 +83,7 @@ header div {
   display: flex;
   justify-content: space-between;
   min-width: 1000px;
+  padding: 0 75px 0 55px;
 }
 header li {
   list-style: none;
@@ -146,16 +147,22 @@ header a {
   padding-bottom: 10px;
 }
 #nav-center {
+  position: relative;
   min-width: 1000px;
   margin: 0 auto;
 }
-#nav-center ul {
+#nav-center a {
+  color: black;
+  font-size: 16px;
+  margin: 0 10px;
+}
+#nav-title {
   background-color: white;
   display: inline-block;
   width: 100%;
   margin-bottom: 0;
 }
-#nav-center li {
+#nav-title li {
   list-style: none;
   display: inline-block;
   text-align: center;
@@ -163,24 +170,62 @@ header a {
   line-height: 35px;
   text-decoration: none;
 }
-#nav-center li:nth-child(1),
-#nav-center li:nth-child(2) {
+#nav-title li:nth-child(1),
+#nav-title li:nth-child(2) {
   width: 100px;
   background: #db0f0f;
   float: left;
 }
-#nav-center li:nth-child(1):hover,
-#nav-center li:nth-child(2):hover {
-  background: #000;
-}
-#nav-center li:nth-child(1) a,
-#nav-center li:nth-child(2) a {
+#nav-title li:nth-child(1) a,
+#nav-title li:nth-child(2) a {
   color: white;
 }
-#nav-center a {
-  color: black;
-  font-size: 16px;
-  margin: 0 10px;
+#nav-list {
+  position: absolute;
+  display: none;
+  width: 200px;
+  height: 495px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.425);
+  z-index: 10;
+}
+#nav-list li {
+  height: 30.9375px;
+  line-height: 30.9375px;
+}
+#nav-list li:hover {
+  background-color: white;
+  color: #db0f0f;
+}
+#nav-list2 {
+  position: absolute;
+  width: 200px;
+  height: 495px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 10;
+  padding: 20px 0;
+}
+#nav-list2 li {
+  height: 30px;
+  width: 150px;
+  margin: 15px auto;
+  line-height: 30.9375px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+#nav-list2 li:hover {
+  background-color: red;
+}
+#searchData {
+  position: absolute;
+  z-index: 10;
+  height: 492px;
+  width: 850px;
+  background-color: #ffffff;
+  top: 37px;
+  left: 200px;
 }
 #img-nav {
   border-top: 2px solid red;
