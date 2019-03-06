@@ -197,6 +197,9 @@ header a {
   background-color: white;
   color: #db0f0f;
 }
+#nav-list li:hover #searchData {
+  display: block ! important;
+}
 #nav-list2 {
   position: absolute;
   width: 200px;
@@ -224,15 +227,55 @@ header a {
   height: 492px;
   width: 850px;
   background-color: #ffffff;
-  top: 37px;
+  top: 3px;
   left: 200px;
+  color: #000;
+  padding-top: 30px;
+}
+#searchData p {
+  margin-left: 30px;
+  display: block;
+  width: 70px;
+  text-align: justify;
+  text-align-last: justify;
+}
+#searchData span {
+  float: right;
+}
+#searchData ul {
+  display: flex;
+  width: 600px;
+  margin: -10px 30px 20px 120px;
+  flex-wrap: wrap ;
+}
+#searchData li {
+  margin: 0 5px;
+  height: 20px;
 }
 #img-nav {
   border-top: 2px solid red;
-  text-align: right;
+  width: 1220px;
 }
 #img-nav img {
-  width: 100%;
+  width: 1220px;
+  height: 490px;
+}
+#img-nav ul {
+  width: 200px;
+  display: flex;
+  margin: -40px auto 0 auto;
+}
+#img-nav li {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  height: 5px;
+  width: 30px;
+  background: rgba(14, 13, 13, 0.534);
+  margin-left: 15px;
+}
+#img-nav li:hover {
+  background: white !important;
 }
 #avtive {
   background-color: white;

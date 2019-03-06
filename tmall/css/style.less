@@ -238,6 +238,9 @@ header {
             background-color:white;
             color: #db0f0f; 
         }
+        &:hover #searchData {
+            display: block ! important;
+        }
     }
 }
 #nav-list2{
@@ -264,19 +267,69 @@ header {
 }
 #searchData{
     position: absolute;
+    //display: block;
     z-index: 10;
     height: 492px;
     width: 850px;
     background-color:rgb(255, 255, 255);
-    top:37px;
-
+    top:3px;
     left: 200px;
+    color: #000;
+    padding-top: 30px; 
+    p {      
+        margin-left: 30px;    
+        display: block;
+        width: 70px;
+        //border: 1px solid black;
+        text-align:justify; text-align-last:justify; //两端居中   
+    }
+    span{
+        float: right;
+    }
+    ul{
+       
+       // min-height: 40px;
+        display: flex;
+        //align-items: center;
+        width: 600px;
+       margin:-10px 30px 20px 120px;
+        flex-wrap:wrap ;
+       //border: 1px solid black;
+    }
+    li{
+        margin: 0 5px;
+        height: 20px;
+       // border: 1px solid black;
+    }
+    
+
 }
 #img-nav {
-    border-top: 2px solid red;
-    text-align: right;
+   // position: relative;
+    border-top: 2px solid red;  
+    width: 1220px; 
+  
+   
     img{
-        width: 100%;
+        width: 1220px;
+        height: 490px;
+    }
+    ul{
+        width: 200px; 
+        display: flex;
+        margin: -40px auto 0 auto;      
+    }
+    li{
+        position: relative;
+        text-align: center;
+        z-index: 10;
+        height: 5px;
+        width: 30px;
+        background: rgba(14, 13, 13, 0.534);
+        margin-left: 15px;
+        &:hover {
+            background: white !important;
+        }
     }
 }
 
