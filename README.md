@@ -2,7 +2,7 @@
 1. 数据报表制定页面,通过LocalStorage存储数据,通过SVG和Canvas根据选择数据渲染图表,通过location.hash来实现页面刷新保留渲染状态
 - demo:[min](https://isuye.github.io/practice/min/index.html)
 2. 同1,数据用AJAX从数据库获取
-- 代码链接地址:[https://studio.dev.tencent.com/ws/wvtmmh](https://studio.dev.tencent.com/ws/wvtmmh)
+- 代码链接地址:[https://dev.tencent.com/u/GO-YAYA/p/MIN/git/tree/master](https://dev.tencent.com/u/GO-YAYA/p/MIN/git/tree/master)
 - demo:[GitHub Pages](https://wvtmmh.coding.io)
 3. 组合使用构造函数模式和原型模式创建对象,利用Promise完成整个用餐过程
 - demo:[restaurant](https://isuye.github.io/practice/restaurant/index.html)
