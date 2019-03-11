@@ -14,4 +14,6 @@
 - demo:[blog](https://isuye.github.io/practice/blog/index.html)
 7. 仿天猫界面
 - demo:[tmall](https://isuye.github.io/practice/tmall/index.html)
+9. vue练习
+- demo:[app1](https://isuye.github.io/practice/app1/index.html)
 
