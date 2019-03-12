@@ -17,5 +17,5 @@
 9. vue练习
 - demo:[app1](https://isuye.github.io/practice/app1/index.html)
 10. vue练习2 (简单选择题测试)
-- demo:[vue1](https://isuye.github.io/practice/vue1/index.html)
+- demo:[vue2](https://isuye.github.io/practice/vue2/index.html)
 
