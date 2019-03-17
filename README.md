@@ -18,4 +18,6 @@
 - demo:[app1](https://isuye.github.io/practice/app1/index.html)
 10. vue练习2 (简单选择题测试)
 - demo:[vue2](https://isuye.github.io/practice/vue2/dist/index.html)
+11. vue练习3 (vue+vuex+vue-router+cube-ui   仿美团外卖,待完善)
+- demo:[vue3](https://isuye.github.io/practice/vue3/dist/index.html)
 
