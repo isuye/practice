@@ -24,7 +24,7 @@
 
 export default {
   name: "promenulist",
-  props: ['list','carlist'],
+  props: ['list','index'],
   data() {
       return {
           images:this.list.images,
@@ -39,6 +39,7 @@ export default {
       
       this.num+=1;
       this.totalprice = ((this.num*100) * (this.list.price*100))/10000; 
+     
     },
     substracToCar:function(){
       
@@ -57,13 +58,16 @@ export default {
         name:this.name,
         num: this.num ,
         price: this.price,    
-        totalprice: this.totalprice
+        totalprice: this.totalprice,
+        parentIndex:this.index
       })
     },
-    getNum: function() {
+    getNum: function(nval, oval) {
       
       if(this.$store.state.proCar[this.name]){
         this.num=this.$store.state.proCar[this.name].num
+      }else if(nval===0){
+        this.num=0
       }
     }
   },

@@ -2,10 +2,10 @@
   <div class="menus">
     <div class="menusNav">{{$store.state.choseLi?$store.state.choseLi :menubarList[0].category}}</div>
     <cube-scroll ref="scroll1" class="scroll-list-outer-wrap"  >
-      <ul class="menusList" v-for="(item, index) in items1" :key="index" v-bind:class="'ul'+index">
-        {{item.category  }}
-        <li v-for="(item, index) in item.product" :key="index" @touchmove="getscorllY">
-          <ProMenuList v-bind:list="item"></ProMenuList>
+      <ul class="menusList" v-for="(item1, index1) in items1" :key="index1" v-bind:class="'ul'+index1">
+        {{item1.category  }}
+        <li v-for="(item2, index2) in item1.product" :key="index2" @touchmove="getscorllY" >
+          <ProMenuList v-bind:list="item2" v-bind:index="index1"></ProMenuList>
         </li>
       </ul>
     </cube-scroll>
@@ -91,6 +91,7 @@ export default {
   width: 100%;
   position: relative;
   padding: 0 10px;
+   z-index: 11; 
   // display: flex;
   // flex-direction: column;
   .menusNav {

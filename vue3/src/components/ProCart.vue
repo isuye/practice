@@ -14,13 +14,14 @@
       <div class="carlist scroll-list-wrap" >
         <div class="carnav">
           <p>包装费2元</p>
-          <p>清空购物车</p>
+          <p v-on:click="clearCar">清空购物车</p>
         </div>
         
         <cube-scroll ref="scroll1" class="scroll-list-outer-wrap"  >
         <ul>
           <li v-for="(item,index) in $store.state.proCar" v-bind:key="index">
-            {{index}} {{item.totalprice}}
+           <span class="itemName">{{index}}</span>
+           <span >¥{{item.totalprice}}</span>  
             <div class="listcontrol">
               <span  class="cyclo"  v-on:click="addToCar(index,(--item.num))"  >-</span>
               <span  class="number">{{item.num}}</span>
@@ -60,7 +61,9 @@ export default {
   },
   methods: {
     shouList: function(index) {
+     
       this.isshow = !this.isshow;
+     
     },
      addToCar:function(index,nums){
       
@@ -72,6 +75,10 @@ export default {
     substracToCar:function(){
       this.num--;
     },
+    clearCar(){
+      this.$store.commit('clearProCar');
+      this.isshow = false;
+    }
   },
   watch: {
     getPrice(nval, oval) {
@@ -87,7 +94,7 @@ export default {
 .cart {
   color: white;
   width: 100%;
-  height: 70px;
+  height: 50px;
   background: rgb(29, 29, 29);
   bottom: 0;
   display: flex;
@@ -110,8 +117,6 @@ export default {
     position: absolute;
     top: 0;
     right: 10px;
-    
-
   }
   .cyclo{
     display:inline-block;
@@ -131,6 +136,10 @@ export default {
   }
   .scroll-list-outer-wrap{
     max-height: 130px;
+  }
+  .itemName{
+    display: inline-block;
+    width: 170px;
   }
 }
 .chose {

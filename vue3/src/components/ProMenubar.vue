@@ -1,6 +1,5 @@
 <template>
   <div class="menubar scroll-list-wrap">
-    <!-- <cube-scroll ref="scroll" :data="items" :options="options"></cube-scroll> -->
     <cube-scroll ref="scroll1">
       <ul class="cube-scroll-list">
         <li class="cube-scroll-item" 
@@ -8,7 +7,7 @@
         :key="index"
         v-bind:class='{active:index===clickIndex}'
         v-on:click="choseLi(index,item)"
-        >{{item}}</li>
+        >{{item}} <span v-if="children[index]>0"> {{children[index]}}  </span> </li>
       </ul>
     </cube-scroll>
   </div>
@@ -25,7 +24,8 @@ export default {
     return {
       items: this.menubarList,
       itemIndex: this.menubarList.length,
-      clickIndex:0
+      clickIndex:0,
+      children:[],
     };
   },
   computed: {
@@ -37,6 +37,9 @@ export default {
     },
     choseBar() {
       return this.$store.state.activeindex;
+    },
+    getPrice: function() {
+      return this.$store.state.allprice;
     }
     
   },
@@ -44,11 +47,27 @@ export default {
     choseLi(index,item) {
       this.clickIndex=index;
       this.$store.commit('getChoseLi',[item,index])
+    },
+    haomanychose(){
+
     }
   },
   watch: {
     choseBar:function(nval,oval){
       this.clickIndex=nval;
+    },
+    getPrice: function() {
+      
+      this.children=[];
+      for(var i in this.$store.state.proCar){
+       var index = this.$store.state.proCar[i].parentIndex;
+        
+        if(this.children[index]){
+          this.children[index]++
+        }else{
+          this.children[index]=1
+        }
+      }
     }
   }
 };
@@ -61,6 +80,7 @@ export default {
   width: 7em;
   background: rgb(226, 226, 226);
   font-size: 12px;
+  
   .active {
     background: rgb(255, 255, 255);
   }
@@ -72,17 +92,30 @@ export default {
   flex-direction: column;
 
   justify-content: center;
+ 
 }
 .cube-scroll-item {
+  position: relative;
   font-size: 12px;
-  //height:70px;
-  //height:auto;
   line-height: 15px;
   padding: 10px 9px;
+   
+  span {
+    display:inline-block;
+    border-radius: 100%;
+    width: 15px;
+    height:15px;
+    line-height: 15px;
+    padding: 0;
+    text-align: center;
+    //font-size: 25px; 
+    background: rgb(187, 187, 84);
+    position: absolute;
+    top:2px;
+    right: 2px;
 
-  // word-break:break-all ;
-  //display: inline-block;
-  //line-height: 20px;
+  }
+
 }
 </style>
 
