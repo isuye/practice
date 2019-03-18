@@ -11,8 +11,8 @@
        
 
         <div class="control" >
-          <span v-on:click="substracToCar" v-if="num!==0" class="cyclo">-</span>
-          <span v-if="num!==0" class="number">{{num}}</span>
+          <span v-on:click="substracToCar" v-if="num>0" class="cyclo">-</span>
+          <span v-if="num>0" class="number">{{num}}</span>
           <span v-on:click="addToCar" class="cyclo">+</span>
         </div>
     </div>
@@ -28,37 +28,50 @@ export default {
   data() {
       return {
           images:this.list.images,
-          
+            price: this.list.price,
             name: this.list.name,
             num:0 ,
-            totalPrice: 0
-          
+            totalprice: 0       
       }
   },
   methods: {
     addToCar:function(){
-      this.num++;
-      this.totalPrice = this.num * this.list.price; 
+      
+      this.num+=1;
+      this.totalprice = ((this.num*100) * (this.list.price*100))/10000; 
     },
     substracToCar:function(){
-      this.num--;
-      this.totalPrice = this.num * this.list.price; 
+      
+      this.num-=1;
+      this.totalprice = ((this.num*100) * (this.list.price*100))/10000; 
     },
+  },
+  computed: {
+    getNum: function() {
+      return this.$store.state.allprice;
+    }
   },
   watch: {
     num:function(nval, oval) {
       this.$store.commit('addProCar', {
         name:this.name,
         num: this.num ,
-        price: this.totalPrice
+        price: this.price,    
+        totalprice: this.totalprice
       })
+    },
+    getNum: function() {
+      
+      if(this.$store.state.proCar[this.name]){
+        this.num=this.$store.state.proCar[this.name].num
+      }
     }
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less">
+<style  lang="less">
 .promenulist {
   
   width: 100%;

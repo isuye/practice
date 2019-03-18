@@ -11,7 +11,7 @@ export default new Vuex.Store({
     proCar: {},
     delivery_start_price: null,
     deliver_fee: null,
-    totalPrice: null
+    allprice: 0
   },
   mutations: {
     getChoseLi(state, data) {
@@ -25,22 +25,36 @@ export default new Vuex.Store({
       state.activeindex = data;
     },
     addProCar: function(state, data) {
-      state.proCar[data.name] = { num: null, totalPrice: null };
+      state.proCar[data.name] = { num: null, price: null, totalprice: 0 };
       state.proCar[data.name].num = data.num;
-      state.proCar[data.name].totalPrice = data.price;
+      state.proCar[data.name].price = data.price;
+      
+      state.proCar[data.name].totalprice = data.num*data.price;
       if (data.num == 0) {
         delete state.proCar[data.name]
       }
       var price = 0
       for (var i in state.proCar) {
         
-         price += state.proCar[i].totalPrice;
+         price += state.proCar[i].totalprice*100;
       }
-      state.totalPrice = price;
+      state.allprice = price/100;
     },
     getmsg: function(state, data) {
       state.delivery_start_price = data[0];
       state.deliver_fee = data[1];
+    },
+    changeNum: function(state, data) {
+      state.proCar[data.name].num = data.num;
+      
+      state.proCar[data.name].totalprice = data.num*Number(state.proCar[data.name].price);
+
+      var price = 0
+      for (var i in state.proCar) {
+        
+         price += state.proCar[i].totalprice*100;
+      }
+      state.allprice = price/100;
     }
   },
   actions: {}

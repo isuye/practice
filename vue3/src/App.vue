@@ -986,8 +986,7 @@ body,
 #app {
   position:relative;
   header {
-    height: 8em;
-    
+    height: 100px; 
     padding: 15px 10px 5px 10px;
     display:flex;
     background: rgba(41, 39, 39, 0.966);

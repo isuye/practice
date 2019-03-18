@@ -1,20 +1,36 @@
 <template>
   <div class="cart">
-    <img src alt>
+    
 
     <div class="chose" v-on:click="shouList">
-      <p v-if="price>0">¥{{price}}</p>
+      <p v-if="$store.state.allprice>0">¥{{$store.state.allprice}}</p>
       <p>另需配送费{{$store.state.deliver_fee}}</p>
     </div>
-    <div v-if="price==0" class="payMoney">{{$store.state.delivery_start_price+'元起送'}}</div>
+    <div v-if="$store.state.allprice==0" class="payMoney">{{$store.state.delivery_start_price+'元起送'}}</div>
     <div v-else class="payMoney pay">去结算</div>
 
-    <div class="listback" v-if="isshow" v-on:click="shouList">
-      <div class="carlist">
+    <div class="listback" v-if="isshow && $store.state.allprice >0 " v-on:click.self="shouList">
+
+      <div class="carlist scroll-list-wrap" >
         <div class="carnav">
           <p>包装费2元</p>
           <p>清空购物车</p>
         </div>
+        
+        <cube-scroll ref="scroll1" class="scroll-list-outer-wrap"  >
+        <ul>
+          <li v-for="(item,index) in $store.state.proCar" v-bind:key="index">
+            {{index}} {{item.totalprice}}
+            <div class="listcontrol">
+              <span  class="cyclo"  v-on:click="addToCar(index,(--item.num))"  >-</span>
+              <span  class="number">{{item.num}}</span>
+              <span  class="cyclo" v-on:click="addToCar(index,(++item.num))">+</span>
+            </div>
+          </li>
+        </ul>
+        </cube-scroll>
+       
+        
       </div>
     </div>
   </div>
@@ -39,13 +55,23 @@ export default {
       return (this.msg = this.$store.state.proCar);
     },
     getPrice: function() {
-      return this.$store.state.totalPrice;
+      return this.$store.state.allprice;
     }
   },
   methods: {
-    shouList: function() {
+    shouList: function(index) {
       this.isshow = !this.isshow;
-    }
+    },
+     addToCar:function(index,nums){
+      
+      this.$store.commit('changeNum',{
+        name:index,
+        num:nums
+      })
+    },
+    substracToCar:function(){
+      this.num--;
+    },
   },
   watch: {
     getPrice(nval, oval) {
@@ -61,7 +87,7 @@ export default {
 .cart {
   color: white;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background: rgb(29, 29, 29);
   bottom: 0;
   display: flex;
@@ -70,9 +96,41 @@ export default {
   img {
     width: 50px;
   }
+  ul {
+    padding-top: -50px;
+  }
   li {
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    padding:0 10px;
+    border-bottom: 1px solid rgb(88, 88, 88);
+  }
+  .listcontrol {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    
+
+  }
+  .cyclo{
+    display:inline-block;
+    border-radius: 100%;
+    width: 22px;
+    height:22px;
+    line-height: 19px;
+    padding: 0;
+    text-align: center;
+    font-size: 25px; 
+    background: rgb(187, 187, 84);
+  }
+  .number {
+    display:inline-block;
+    margin: 0 10px;
+    height:22px;
+  }
+  .scroll-list-outer-wrap{
+    max-height: 130px;
   }
 }
 .chose {
@@ -113,6 +171,8 @@ export default {
   background: rgb(248, 248, 248);
   bottom: 0;
   width: 100%;
+  z-index: 20;
+  max-height: 180px;
 }
 .carnav {
   height: 25px;
@@ -122,5 +182,4 @@ export default {
   padding: 0 5px;
   justify-content: space-between;
 }
-
 </style>
