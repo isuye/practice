@@ -1,6 +1,6 @@
 <template>
   <div class="cart">
-    
+    <img src alt>
 
     <div class="chose" v-on:click="shouList">
       <p v-if="$store.state.allprice>0">¥{{$store.state.allprice}}</p>

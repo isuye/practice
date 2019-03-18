@@ -1002,8 +1002,8 @@ body,
     a {
       width: 60px;
       text-align: center;
-      height: 2.5em;
-      line-height: 2.5em;
+      height: 35px;
+      line-height: 35px;
       text-decoration: none;
       color:black;
     }
